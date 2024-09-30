@@ -3,14 +3,15 @@ import './Popular.css'
 import data_product from '../Assets/data'
 import Item from '../Items/Item'
 
-const popular = () => {
+export const  SitePopular = () => {
   return (
     <div className='popular'>
         <h1>POPULAR IN WOMEN</h1>
-        <hr />
+        <hr/>
         <div className="popular-item">
             {data_product.map((item,i)=>{
-                return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price}/>
+                return <Item key={i} id={item.id} name={item.name} image={item.image} new_price={item.new_price} old_price={item.old_price }/>
+
             })}
         </div>
 
@@ -18,4 +19,4 @@ const popular = () => {
   )
 }
 
-export default popular
+export default SitePopular
